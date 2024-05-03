@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SearchVC: UIViewController {
 
@@ -27,7 +28,7 @@ class SearchVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
 
@@ -40,7 +41,7 @@ class SearchVC: UIViewController {
     @objc func pushFollowerListVC() {
 
         guard isUsernameEntered else {
-            print("No username")
+            presentGFAlertOnMainThread(title: "ユーザーネームが空だよ", message: "ユーザーネームをいれてね😃", buttonTitle: "Ok")
             return
         }
         let followerListVC      = FollowerListVC()
@@ -96,5 +97,18 @@ extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         pushFollowerListVC()
         return true
+    }
+}
+
+struct SeachVCPreview: PreviewProvider {
+    struct Wrapper: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> some UIViewController {
+            return SearchVC()
+        }
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        }
+    }
+    static var previews: some View {
+        Wrapper()
     }
 }
