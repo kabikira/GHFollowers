@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class FollowerListVC: UIViewController {
 
@@ -19,4 +20,17 @@ class FollowerListVC: UIViewController {
 
     }
 
+}
+
+struct FollowerListVCPreview: PreviewProvider {
+    struct Wrapper: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> some UIViewController {
+            return FollowerListVC()
+        }
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        }
+    }
+    static var previews: some View {
+        Wrapper()
+    }
 }
