@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkManager {
     static let shared = NetworkManager()
-    let baseURL = "https://api.github.com/users"
+    let baseURL = "https://api.github.com/users/"
 
     private init() {}
 
@@ -30,7 +30,7 @@ class NetworkManager {
             }
 
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(.invaliResponse))
+                completed(.failure(.invalidResponse))
                 return
             }
 
