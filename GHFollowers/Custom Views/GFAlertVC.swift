@@ -113,7 +113,7 @@ class GFAlertVC: UIViewController {
 struct GFAlertVCPreview: PreviewProvider {
     struct Wrapper: UIViewControllerRepresentable {
         func makeUIViewController(context: Context) -> some UIViewController {
-            return GFAlertVC(title: "タイトル", message: "メッセージ", buttonTitle: "OK")
+            return GFAlertVC(title: "タイトル", message: "Ivalid response from the server. Please try again.", buttonTitle: "OK")
         }
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         }
