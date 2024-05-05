@@ -30,6 +30,7 @@
 		3B4ED1262BE546400000D416 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ED1252BE546400000D416 /* ErrorMessage.swift */; };
 		3B4ED1292BE630970000D416 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ED1282BE630970000D416 /* FollowerCell.swift */; };
 		3B4ED12B2BE632DF0000D416 /* GFAvatarimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ED12A2BE632DF0000D416 /* GFAvatarimageView.swift */; };
+		3BB493CB2BE7CED200B32C48 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB493CA2BE7CED200B32C48 /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		3B4ED1252BE546400000D416 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		3B4ED1282BE630970000D416 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		3B4ED12A2BE632DF0000D416 /* GFAvatarimageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarimageView.swift; sourceTree = "<group>"; };
+		3BB493CA2BE7CED200B32C48 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 		3B4ED1242BE545F70000D416 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3BB493CA2BE7CED200B32C48 /* UIHelper.swift */,
 				3B4ED1252BE546400000D416 /* ErrorMessage.swift */,
 			);
 			path = Utilities;
@@ -378,6 +381,7 @@
 				3B4ED10F2BE30F320000D416 /* GFTitleLabel.swift in Sources */,
 				3B4ED10D2BE282820000D416 /* FollowerListVC.swift in Sources */,
 				3B4ED1262BE546400000D416 /* ErrorMessage.swift in Sources */,
+				3BB493CB2BE7CED200B32C48 /* UIHelper.swift in Sources */,
 				3B4ED1232BE523020000D416 /* NetworkManager.swift in Sources */,
 				3B4ED10B2BE0B1560000D416 /* GFTextField.swift in Sources */,
 				3B4ED1112BE350C30000D416 /* GFBodyLabel.swift in Sources */,
