@@ -32,6 +32,7 @@
 		3B4ED12B2BE632DF0000D416 /* GFAvatarimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ED12A2BE632DF0000D416 /* GFAvatarimageView.swift */; };
 		3BB493CB2BE7CED200B32C48 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB493CA2BE7CED200B32C48 /* UIHelper.swift */; };
 		3BB493D32BE90E1600B32C48 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB493D22BE90E1600B32C48 /* GFEmptyStateView.swift */; };
+		3BB493D52BE9E9BB00B32C48 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB493D42BE9E9BB00B32C48 /* UserInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		3B4ED12A2BE632DF0000D416 /* GFAvatarimageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarimageView.swift; sourceTree = "<group>"; };
 		3BB493CA2BE7CED200B32C48 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		3BB493D22BE90E1600B32C48 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		3BB493D42BE9E9BB00B32C48 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				3B4ED1042BDFB4E30000D416 /* SearchVC.swift */,
 				3B4ED1062BDFB57C0000D416 /* FavoritesListVC.swift */,
 				3B4ED10C2BE282820000D416 /* FollowerListVC.swift */,
+				3BB493D42BE9E9BB00B32C48 /* UserInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				3B4ED1292BE630970000D416 /* FollowerCell.swift in Sources */,
 				3B4ED12B2BE632DF0000D416 /* GFAvatarimageView.swift in Sources */,
 				3B4ED1152BE352B50000D416 /* GFAlertVC.swift in Sources */,
+				3BB493D52BE9E9BB00B32C48 /* UserInfoVC.swift in Sources */,
 				3B4ED11E2BE4F3D60000D416 /* Follower.swift in Sources */,
 				3B4ED0D72BDF82120000D416 /* SceneDelegate.swift in Sources */,
 				3B4ED10F2BE30F320000D416 /* GFTitleLabel.swift in Sources */,
