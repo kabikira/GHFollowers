@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GHFollowers
 //
-//  Created by koala panda on 2024/05/04.
+//  Created by koala panda on 2024/05/09.
 //
 
 import Foundation
