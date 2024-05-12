@@ -37,6 +37,7 @@
 		3BB493DB2BEC86BF00B32C48 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB493DA2BEC86BF00B32C48 /* GFSecondaryTitleLabel.swift */; };
 		3BB493DD2BEDDCA000B32C48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB493DC2BEDDCA000B32C48 /* Constants.swift */; };
 		3BD2645E2BF084E70072C67C /* GFitemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2645D2BF084E70072C67C /* GFitemInfoView.swift */; };
+		3BD264602BF0AEA30072C67C /* GFIteminfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2645F2BF0AEA30072C67C /* GFIteminfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		3BB493DA2BEC86BF00B32C48 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		3BB493DC2BEDDCA000B32C48 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3BD2645D2BF084E70072C67C /* GFitemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFitemInfoView.swift; sourceTree = "<group>"; };
+		3BD2645F2BF0AEA30072C67C /* GFIteminfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFIteminfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 			children = (
 				3B4ED1142BE352B50000D416 /* GFAlertVC.swift */,
 				3BB493D82BEC4BC900B32C48 /* GFUserInfoHeaderVC.swift */,
+				3BD2645F2BF0AEA30072C67C /* GFIteminfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				3B4ED0D52BDF82120000D416 /* AppDelegate.swift in Sources */,
 				3BB493D72BEC471400B32C48 /* GFError.swift in Sources */,
 				3B4ED1292BE630970000D416 /* FollowerCell.swift in Sources */,
+				3BD264602BF0AEA30072C67C /* GFIteminfoVC.swift in Sources */,
 				3BD2645E2BF084E70072C67C /* GFitemInfoView.swift in Sources */,
 				3B4ED12B2BE632DF0000D416 /* GFAvatarimageView.swift in Sources */,
 				3B4ED1152BE352B50000D416 /* GFAlertVC.swift in Sources */,
