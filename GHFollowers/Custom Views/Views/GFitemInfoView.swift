@@ -12,7 +12,7 @@ enum ItemInfoType {
 }
 
 
-class GFitemInfoView: UILabel {
+class GFItemInfoView: UIView {
 
     let symbolImageView = UIImageView()
     let titleLabel = GFTitleLabel(textAligment: .left, fontSize: 14)
@@ -33,6 +33,10 @@ class GFitemInfoView: UILabel {
         addSubview(symbolImageView)
         addSubview(titleLabel)
         addSubview(conutLabel)
+
+        symbolImageView.translatesAutoresizingMaskIntoConstraints = false
+        symbolImageView.contentMode = .scaleAspectFill
+        symbolImageView.tintColor = .label
 
         NSLayoutConstraint.activate([
             symbolImageView.topAnchor.constraint(equalTo: self.topAnchor),
