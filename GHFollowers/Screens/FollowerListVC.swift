@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 protocol FollowerListVCDelgate: AnyObject {
     func didRequestFollowers(for username: String)
@@ -157,21 +156,6 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
         updateData(on: followers)// フィルターする前の、元の配列を渡す
     }
 }
-
-
-struct FollowerListVCPreview: PreviewProvider {
-    struct Wrapper: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return FollowerListVC()
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-    static var previews: some View {
-        Wrapper()
-    }
-}
-
 
 extension FollowerListVC: FollowerListVCDelgate {
 

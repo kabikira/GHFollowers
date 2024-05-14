@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class GFAlertVC: UIViewController {
 
@@ -108,17 +107,4 @@ class GFAlertVC: UIViewController {
         dismiss(animated: true)
     }
 
-}
-
-struct GFAlertVCPreview: PreviewProvider {
-    struct Wrapper: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return GFAlertVC(title: "タイトル", message: "Ivalid response from the server. Please try again.", buttonTitle: "OK")
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-    static var previews: some View {
-        Wrapper()
-    }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class SearchVC: UIViewController {
 
@@ -97,18 +96,5 @@ extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         pushFollowerListVC()
         return true
-    }
-}
-
-struct SeachVCPreview: PreviewProvider {
-    struct Wrapper: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return SearchVC()
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-    static var previews: some View {
-        Wrapper()
     }
 }
