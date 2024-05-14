@@ -8,6 +8,10 @@
 import UIKit
 import SwiftUI
 
+protocol FollowerListVCDelgate: AnyObject {
+    func didRequestFollowers(for username: String)
+}
+
 class FollowerListVC: UIViewController {
 
     enum Section { case main }
@@ -132,6 +136,7 @@ extension FollowerListVC: UICollectionViewDelegate {
 
         let destVC = UserInfoVC()
         destVC.username = follower.login
+        destVC.delegate = self
         let navController = UINavigationController(rootViewController: destVC)
         present(navController, animated: true)
     }
@@ -165,4 +170,21 @@ struct FollowerListVCPreview: PreviewProvider {
     static var previews: some View {
         Wrapper()
     }
+}
+
+
+extension FollowerListVC: FollowerListVCDelgate {
+
+    func didRequestFollowers(for username: String) {
+        self.username = username
+        title = username
+        page = 1
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        // ここは修正が必要
+        collectionView.setContentOffset(.zero, animated: true)
+        getFollowers(username: username, page: page)
+    }
+    
+
 }
