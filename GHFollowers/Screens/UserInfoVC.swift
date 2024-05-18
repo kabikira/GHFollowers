@@ -61,13 +61,11 @@ class UserInfoVC: UIViewController {
 
         let followerItemVC = GFFollowerItemVC(user: user)
         followerItemVC.delegate = self
-        
 
-        self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
-        self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
+        self.add(childVC: repoItemVC, to: self.itemViewOne)
+        self.add(childVC: followerItemVC, to: self.itemViewTwo)
         self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
         self.dateLabel.text = "GitHub Since \(user.createdAt.convertToDisplayFormat())"
-        
     }
 
 
