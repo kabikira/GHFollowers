@@ -9,7 +9,7 @@ import UIKit
 
 class FavoriteCell: UITableViewCell {
 
-    static let reuseID = "FollwerCell"
+    static let reuseID = "FavoriteCell"
     let avatarImageView = GFAvatarimageView(frame: .zero)
     let usernameLabel = GFTitleLabel(textAligment: .center, fontSize: 26)
 
@@ -25,6 +25,7 @@ class FavoriteCell: UITableViewCell {
 
 
     func set(favorite: Follower) {
+        print("お気に入りです: /(favorite)")
         usernameLabel.text = favorite.login
         avatarImageView.downloadImage(from: favorite.avatarUrl)
     }
