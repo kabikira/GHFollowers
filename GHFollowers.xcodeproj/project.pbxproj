@@ -43,6 +43,7 @@
 		3BD264672BF18CB10072C67C /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264662BF18CB10072C67C /* Date+Ext.swift */; };
 		3BD264692BF18D030072C67C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264682BF18D030072C67C /* String+Ext.swift */; };
 		3BD264AB2BF475B30072C67C /* PresistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264AA2BF475B30072C67C /* PresistenceManager.swift */; };
+		3BD264AE2BF902CF0072C67C /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264AD2BF902CF0072C67C /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		3BD264662BF18CB10072C67C /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		3BD264682BF18D030072C67C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		3BD264AA2BF475B30072C67C /* PresistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresistenceManager.swift; sourceTree = "<group>"; };
+		3BD264AD2BF902CF0072C67C /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4ED1282BE630970000D416 /* FollowerCell.swift */,
+				3BD264AD2BF902CF0072C67C /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				3BB493D72BEC471400B32C48 /* GFError.swift in Sources */,
 				3B4ED1292BE630970000D416 /* FollowerCell.swift in Sources */,
 				3BD264622BF0FD9F0072C67C /* GFRepoItemVC.swift in Sources */,
+				3BD264AE2BF902CF0072C67C /* FavoriteCell.swift in Sources */,
 				3BD264602BF0AEA30072C67C /* GFItemInfoVC.swift in Sources */,
 				3BD2645E2BF084E70072C67C /* GFitemInfoView.swift in Sources */,
 				3B4ED12B2BE632DF0000D416 /* GFAvatarimageView.swift in Sources */,
