@@ -25,7 +25,6 @@ class FavoriteCell: UITableViewCell {
 
 
     func set(favorite: Follower) {
-        print("お気に入りです: /(favorite)")
         usernameLabel.text = favorite.login
         avatarImageView.downloadImage(from: favorite.avatarUrl)
     }

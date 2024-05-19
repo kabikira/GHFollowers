@@ -1,5 +1,5 @@
 //
-//  PresistenceManager.swift
+//  PersistenceManager.swift
 //  GHFollowers
 //
 //  Created by koala panda on 2024/05/15.
@@ -12,7 +12,7 @@ enum PresistenceActionType {
 }
 
 
-enum PresistenceManager {
+enum PersistenceManager {
 
     static private let defaults = UserDefaults.standard
 
