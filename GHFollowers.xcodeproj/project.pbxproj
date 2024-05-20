@@ -45,6 +45,7 @@
 		3BD264AB2BF475B30072C67C /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264AA2BF475B30072C67C /* PersistenceManager.swift */; };
 		3BD264AE2BF902CF0072C67C /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264AD2BF902CF0072C67C /* FavoriteCell.swift */; };
 		3BD264B12BFA52130072C67C /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B02BFA52130072C67C /* GFTabBarController.swift */; };
+		3BD264B32BFB0BA10072C67C /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B22BFB0BA10072C67C /* GFAlertContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		3BD264AA2BF475B30072C67C /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		3BD264AD2BF902CF0072C67C /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		3BD264B02BFA52130072C67C /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
+		3BD264B22BFB0BA10072C67C /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 			children = (
 				3BB493D22BE90E1600B32C48 /* GFEmptyStateView.swift */,
 				3BD2645D2BF084E70072C67C /* GFitemInfoView.swift */,
+				3BD264B22BFB0BA10072C67C /* GFAlertContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				3BD264AE2BF902CF0072C67C /* FavoriteCell.swift in Sources */,
 				3BD264602BF0AEA30072C67C /* GFItemInfoVC.swift in Sources */,
 				3BD2645E2BF084E70072C67C /* GFitemInfoView.swift in Sources */,
+				3BD264B32BFB0BA10072C67C /* GFAlertContainerView.swift in Sources */,
 				3B4ED12B2BE632DF0000D416 /* GFAvatarimageView.swift in Sources */,
 				3B4ED1152BE352B50000D416 /* GFAlertVC.swift in Sources */,
 				3BB493D52BE9E9BB00B32C48 /* UserInfoVC.swift in Sources */,
