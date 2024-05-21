@@ -32,7 +32,7 @@ class GFUserInfoHeaderVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addView()
+        addSubViews()
         layoutUI()
         configureUIElements()
 
@@ -40,7 +40,7 @@ class GFUserInfoHeaderVC: UIViewController {
 
 
     func configureUIElements() {
-        avatarImageView.downloadImage(from: user.avatarUrl)
+        downloadAvatarImage()
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ?? "No bio available"
@@ -52,7 +52,15 @@ class GFUserInfoHeaderVC: UIViewController {
     }
 
 
-    func addView() {
+    func downloadAvatarImage() {
+        NetworkManager.shared.downloadImage(from: user.avatarUrl) { [weak self] image in
+            guard let self = self else { return }
+            DispatchQueue.main.async { self.avatarImageView.image = image }
+        }
+    }
+    
+
+    func addSubViews() {
         view.addSubview(avatarImageView)
         view.addSubview(usernameLabel)
         view.addSubview(nameLabel)
