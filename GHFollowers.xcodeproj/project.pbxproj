@@ -46,6 +46,7 @@
 		3BD264B12BFA52130072C67C /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B02BFA52130072C67C /* GFTabBarController.swift */; };
 		3BD264B32BFB0BA10072C67C /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B22BFB0BA10072C67C /* GFAlertContainerView.swift */; };
 		3BD264B52BFC59C20072C67C /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B42BFC59C20072C67C /* GFDataLoadingVC.swift */; };
+		3BD264B72BFD6CBA0072C67C /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B62BFD6CBA0072C67C /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		3BD264B02BFA52130072C67C /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		3BD264B22BFB0BA10072C67C /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		3BD264B42BFC59C20072C67C /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
+		3BD264B62BFD6CBA0072C67C /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				3B4ED1162BE4AC1D0000D416 /* UIViewController+Ext.swift */,
 				3BD264662BF18CB10072C67C /* Date+Ext.swift */,
+				3BD264B62BFD6CBA0072C67C /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				3B4ED10B2BE0B1560000D416 /* GFTextField.swift in Sources */,
 				3BD264AB2BF475B30072C67C /* PersistenceManager.swift in Sources */,
 				3B4ED1112BE350C30000D416 /* GFBodyLabel.swift in Sources */,
+				3BD264B72BFD6CBA0072C67C /* UIView+Ext.swift in Sources */,
 				3BB493DD2BEDDCA000B32C48 /* Constants.swift in Sources */,
 				3BD264B12BFA52130072C67C /* GFTabBarController.swift in Sources */,
 			);

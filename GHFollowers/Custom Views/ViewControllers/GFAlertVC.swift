@@ -37,6 +37,7 @@ class GFAlertVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
+        view.addSubviews(continerView, titleLabel, actionButton, messageLabel)
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
@@ -45,8 +46,6 @@ class GFAlertVC: UIViewController {
 
 
     func configureContainerView() {
-        view.addSubview(continerView)
-
         NSLayoutConstraint.activate([
             continerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             continerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -58,7 +57,6 @@ class GFAlertVC: UIViewController {
 
 
     func configureTitleLabel() {
-        continerView.addSubview(titleLabel)
         titleLabel.text = alertTitle ?? "Something went wrong"
 
         NSLayoutConstraint.activate([
@@ -71,7 +69,6 @@ class GFAlertVC: UIViewController {
 
 
     func configureActionButton() {
-        continerView.addSubview(actionButton)
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
 
@@ -85,7 +82,6 @@ class GFAlertVC: UIViewController {
 
 
     func configureMessageLabel() {
-        continerView.addSubview(messageLabel)
         messageLabel.text = message ?? "Uneble to completo request"
         messageLabel .numberOfLines = 4
 
