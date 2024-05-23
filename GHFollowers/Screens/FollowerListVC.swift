@@ -206,7 +206,7 @@ extension FollowerListVC: UISearchResultsUpdating {
     }
 }
 
-extension FollowerListVC: FollowerListVCDelgate {
+extension FollowerListVC: UserInfoVCDelgate {
 
     func didRequestFollowers(for username: String) {
         self.username = username
