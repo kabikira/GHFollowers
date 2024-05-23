@@ -47,6 +47,7 @@
 		3BD264B32BFB0BA10072C67C /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B22BFB0BA10072C67C /* GFAlertContainerView.swift */; };
 		3BD264B52BFC59C20072C67C /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B42BFC59C20072C67C /* GFDataLoadingVC.swift */; };
 		3BD264B72BFD6CBA0072C67C /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B62BFD6CBA0072C67C /* UIView+Ext.swift */; };
+		3BD264B92BFF01720072C67C /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD264B82BFF01720072C67C /* UITableView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		3BD264B22BFB0BA10072C67C /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		3BD264B42BFC59C20072C67C /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
 		3BD264B62BFD6CBA0072C67C /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		3BD264B82BFF01720072C67C /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				3B4ED1162BE4AC1D0000D416 /* UIViewController+Ext.swift */,
 				3BD264662BF18CB10072C67C /* Date+Ext.swift */,
 				3BD264B62BFD6CBA0072C67C /* UIView+Ext.swift */,
+				3BD264B82BFF01720072C67C /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				3B4ED12B2BE632DF0000D416 /* GFAvatarimageView.swift in Sources */,
 				3B4ED1152BE352B50000D416 /* GFAlertVC.swift in Sources */,
 				3BB493D52BE9E9BB00B32C48 /* UserInfoVC.swift in Sources */,
+				3BD264B92BFF01720072C67C /* UITableView+Ext.swift in Sources */,
 				3B4ED11E2BE4F3D60000D416 /* Follower.swift in Sources */,
 				3B4ED0D72BDF82120000D416 /* SceneDelegate.swift in Sources */,
 				3BD264642BF103F30072C67C /* GFFollowerItemVC.swift in Sources */,
