@@ -10,7 +10,7 @@ import UIKit
 class GFAlertVC: UIViewController {
 
     let continerView = GFAlertContainerView()
-    let titleLabel = GFTitleLabel(textAligment: .center, fontSize: 20)
+    let titleLabel   = GFTitleLabel(textAligment: .center, fontSize: 20)
     let messageLabel = GFBodyLabel(textAligment: .center)
     let actionButton = GFButton(backgroundColor: .systemPink, title: "Ok")
 
@@ -23,8 +23,8 @@ class GFAlertVC: UIViewController {
 
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
-        self.alertTitle = title
-        self.message = message
+        self.alertTitle  = title
+        self.message     = message
         self.buttonTitle = buttonTitle
     }
     
@@ -38,6 +38,7 @@ class GFAlertVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         view.addSubviews(continerView, titleLabel, actionButton, messageLabel)
+
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
@@ -97,5 +98,4 @@ class GFAlertVC: UIViewController {
     @objc func dismissVC() {
         dismiss(animated: true)
     }
-
 }

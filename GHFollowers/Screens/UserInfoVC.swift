@@ -14,13 +14,13 @@ protocol UserInfoVCDelgate: AnyObject {
 
 class UserInfoVC: GFDataLoadingVC {
 
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    let scrollView          = UIScrollView()
+    let contentView         = UIView()
 
-    let headerView = UIView()
-    let itemViewOne = UIView()
-    let itemViewTwo = UIView()
-    let dateLabel = GFBodyLabel(textAligment: .center)
+    let headerView          = UIView()
+    let itemViewOne         = UIView()
+    let itemViewTwo         = UIView()
+    let dateLabel           = GFBodyLabel(textAligment: .center)
     var itemViews: [UIView] = []
 
     var username: String!
@@ -32,7 +32,6 @@ class UserInfoVC: GFDataLoadingVC {
         configureScrollView()
         layoutUI()
         getUserInfo()
-
     }
 
 
@@ -141,7 +140,6 @@ extension UserInfoVC: GFFollowerItemVCDelegate {
             presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers. What a shame 😞", buttonTitle: "So sad")
             return
         }
-
         delegate.didRequestFollowers(for: user.login)
         dismissVC()
     }

@@ -9,7 +9,7 @@ import UIKit
 
 class GFAvatarimageView: UIImageView {
     
-    let cache = NetworkManager.shared.cache
+    let cache           = NetworkManager.shared.cache
     let placehoderImage = Images.placeHolder
 
     override init(frame: CGRect) {
@@ -25,8 +25,16 @@ class GFAvatarimageView: UIImageView {
 
     private func configure() {
         layer.cornerRadius = 10
-        clipsToBounds = true
-        image = placehoderImage
+        clipsToBounds      = true
+        image              = placehoderImage
         translatesAutoresizingMaskIntoConstraints = false
+    }
+
+
+    func downloadImage(formURL url: String) {
+        NetworkManager.shared.downloadImage(from: url) { [weak self] image in
+            guard let self = self else { return }
+            DispatchQueue.main.async { self.image = image }
+        }
     }
 }

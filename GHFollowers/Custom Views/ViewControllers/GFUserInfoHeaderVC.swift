@@ -9,12 +9,12 @@ import UIKit
 
 class GFUserInfoHeaderVC: UIViewController {
 
-    let avatarImageView = GFAvatarimageView(frame: .zero)
-    let usernameLabel = GFTitleLabel(textAligment: .left, fontSize: 34)
-    let nameLabel = GFSecondaryTitleLabel(fontSize: 10)
+    let avatarImageView   = GFAvatarimageView(frame: .zero)
+    let usernameLabel     = GFTitleLabel(textAligment: .left, fontSize: 34)
+    let nameLabel         = GFSecondaryTitleLabel(fontSize: 10)
     let locationImageView = UIImageView()
-    let locationLabel = GFSecondaryTitleLabel(fontSize: 18)
-    let bioLabel = GFBodyLabel(textAligment: .left)
+    let locationLabel     = GFSecondaryTitleLabel(fontSize: 18)
+    let bioLabel          = GFBodyLabel(textAligment: .left)
 
     var user: User!
 
@@ -32,36 +32,22 @@ class GFUserInfoHeaderVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubViews()
+        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         layoutUI()
         configureUIElements()
-
     }
 
 
     func configureUIElements() {
-        downloadAvatarImage()
-        usernameLabel.text = user.login
-        nameLabel.text = user.name ?? ""
-        locationLabel.text = user.location ?? "No bio available"
-        bioLabel.text = user.bio ?? "No bio available"
-        bioLabel.numberOfLines = 3
+        avatarImageView.downloadImage(formURL: user.avatarUrl)
+        usernameLabel.text          = user.login
+        nameLabel.text              = user.name ?? ""
+        locationLabel.text          = user.location ?? "No bio available"
+        bioLabel.text               = user.bio ?? "No bio available"
+        bioLabel.numberOfLines      = 3
 
-        locationImageView.image = SFSymbols.location
+        locationImageView.image     = SFSymbols.location
         locationImageView.tintColor = .secondaryLabel
-    }
-
-
-    func downloadAvatarImage() {
-        NetworkManager.shared.downloadImage(from: user.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
-    }
-    
-
-    func addSubViews() {
-        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
     }
 
 
@@ -102,5 +88,4 @@ class GFUserInfoHeaderVC: UIViewController {
             bioLabel.heightAnchor.constraint(equalToConstant: 90)
         ])
     }
-
 }

@@ -9,9 +9,9 @@ import UIKit
 
 class FollowerCell: UICollectionViewCell {
 
-    static let reuseID = "FollwerCell" // viewコントローラーから呼び出すのでstatic let
+    static let reuseID  = "FollwerCell" // viewコントローラーから呼び出すのでstatic let
     let avatarImageView = GFAvatarimageView(frame: .zero)
-    let usernameLabel = GFTitleLabel(textAligment: .center, fontSize: 16)
+    let usernameLabel   = GFTitleLabel(textAligment: .center, fontSize: 16)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,17 +25,13 @@ class FollowerCell: UICollectionViewCell {
 
 
     func set(follower: Follower) {
+        avatarImageView.downloadImage(formURL: follower.avatarUrl)
         usernameLabel.text = follower.login
-        NetworkManager.shared.downloadImage(from: follower.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
     }
 
 
     private func configure() {
         addSubviews(avatarImageView, usernameLabel)
-
         let padding: CGFloat = 8
 
         NSLayoutConstraint.activate([

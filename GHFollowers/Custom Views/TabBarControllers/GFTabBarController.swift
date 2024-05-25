@@ -13,7 +13,6 @@ class GFTabBarController: UITabBarController {
         super.viewDidLoad()
         UITabBar.appearance().tintColor = .systemGreen
         viewControllers = [createSearchNC(), createFavoritesNC()]
-
     }
 
 
@@ -23,7 +22,6 @@ class GFTabBarController: UITabBarController {
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
 
         return UINavigationController(rootViewController: searchVC)
-
     }
 
 
@@ -33,7 +31,6 @@ class GFTabBarController: UITabBarController {
         favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
 
         return UINavigationController(rootViewController: favoritesListVC)
-
     }
 
 }

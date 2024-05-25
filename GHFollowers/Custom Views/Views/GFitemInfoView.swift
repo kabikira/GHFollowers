@@ -11,12 +11,11 @@ enum ItemInfoType {
     case repos, gists, followers, following
 }
 
-
 class GFItemInfoView: UIView {
 
     let symbolImageView = UIImageView()
-    let titleLabel = GFTitleLabel(textAligment: .left, fontSize: 14)
-    let conutLabel = GFTitleLabel(textAligment: .center, fontSize: 14)
+    let titleLabel      = GFTitleLabel(textAligment: .left, fontSize: 14)
+    let conutLabel      = GFTitleLabel(textAligment: .center, fontSize: 14)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,7 +69,6 @@ class GFItemInfoView: UIView {
             symbolImageView.image = SFSymbols.following
             titleLabel.text = "Following"
         }
-
         conutLabel.text = String(count)
     }
 }
