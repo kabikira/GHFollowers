@@ -86,20 +86,45 @@ class FollowerListVC: GFDataLoadingVC {
         showLoadingView()
         isLoadingMoreFollowers = true
 
-        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
-            guard let self = self else { return }
-            self.dismissLoadingView()
+        Task {
+            do {
+                let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
+                updateUI(with: followers)
+                dismissLoadingView()
+            } catch {
+                if let gfError = error as? GFError {
+                    presentGFAlert(title: "Bad Stuff Happind", message: gfError.rawValue, buttonTitle: "Ok")
+                } else {
+                    presentDefaulError()
+                }
 
-            switch result {
-            case .success(let followers):
-                self.updateUI(with: followers)
-
-            case .failure(let error):
-                print(error.rawValue)
-                self.presentGFAlertOnMainThread(title: "Bad Stuff Happind", message: error.rawValue, buttonTitle: "Ok")
+                dismissLoadingView()
             }
-            self.isLoadingMoreFollowers = false
+
+//            guard let followers = try? await NetworkManager.shared.getFollowers(for: username, page: page) else {
+//                presentDefaulError()
+//                dismissLoadingView()
+//                return
+//            }
+//
+//            updateUI(with: followers)
+//            dismissLoadingView()
         }
+
+//        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
+//            guard let self = self else { return }
+//            self.dismissLoadingView()
+//
+//            switch result {
+//            case .success(let followers):
+//                self.updateUI(with: followers)
+//
+//            case .failure(let error):
+//                print(error.rawValue)
+//                self.presentGFAlertOnMainThread(title: "Bad Stuff Happind", message: error.rawValue, buttonTitle: "Ok")
+//            }
+//            self.isLoadingMoreFollowers = false
+//        }
     }
 
 
@@ -183,16 +208,19 @@ extension FollowerListVC: UISearchResultsUpdating {
     @objc func addButtonTapped() {
         showLoadingView()
 
-        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
-            guard let self = self else { return }
-            self.dismissLoadingView()
+        Task {
+            do {
+                let user = try await NetworkManager.shared.getUserInfo(for: username)
+                addUserToFavorites(user: user)
+                dismissLoadingView()
+            } catch {
+                if let gfError = error as? GFError {
+                    presentGFAlert(title: "Something Went Wrong", message: gfError.rawValue, buttonTitle: "Ok")
+                } else {
+                    presentDefaulError()
+                }
 
-            switch result {
-            case .success(let user):
-                self.addUserToFavorites(user: user)
-
-            case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                dismissLoadingView()
             }
         }
     }
@@ -205,11 +233,14 @@ extension FollowerListVC: UISearchResultsUpdating {
             guard let self = self else { return }
 
             guard let error = error else {
-                self.presentGFAlertOnMainThread(title: "Success!", message: "You have successjully favorited this user🎉", buttonTitle: "Hooray!")
+                DispatchQueue.main.async {
+                    self.presentGFAlert(title: "Success!", message: "You have successjully favorited this user🎉", buttonTitle: "Hooray!")
+                }
                 return
             }
-
-            self.presentGFAlertOnMainThread(title: "something went wrong", message: error.rawValue, buttonTitle: "ok")
+            DispatchQueue.main.async {
+                self.presentGFAlert(title: "something went wrong", message: error.rawValue, buttonTitle: "ok")
+            }
         }
     }
 }
