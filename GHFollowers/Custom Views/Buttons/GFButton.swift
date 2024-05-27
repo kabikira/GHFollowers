@@ -20,9 +20,9 @@ class GFButton: UIButton {
     }
 
 
-    convenience init(backgroundColor: UIColor, title: String) {
+    convenience init(color: UIColor, title: String) {
         self.init(frame: .zero)
-        set(color: backgroundColor, title: title)
+        set(color: color, title: title)
     }
 
 
@@ -44,4 +44,8 @@ class GFButton: UIButton {
 //        configuration?.imagePadding = 6
 //        configuration?.imagePlacement = .leading
     }
+}
+
+#Preview {
+    GFButton(color: .blue, title: "Test Button")
 }
