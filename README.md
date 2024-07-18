@@ -1,11 +1,12 @@
 
 https://www.youtube.com/watch?v=JzngncpZLuw
-https://seanallen.teachable.com/
-GitHubのAPIを使用してフォロワーを表示するアプリ
-英語で字幕がでないかもしれないけどクロームの拡張機能でなんとかできる
-UIKitでストーリーボードを使わない
-サードパーティーのライブラリもつかわない
-カールコマンド
+https://seanallen.teachable.com/  
+上記動画のメモ　　
+GitHubのAPIを使用してフォロワーを表示するアプリ  
+英語で字幕がでないかもしれないけどクロームの拡張機能でなんとかできる  
+UIKitでストーリーボードを使わない  
+サードパーティーのライブラリもつかわない  
+カールコマンド  
 curl https://api.github.com/users/saiien0400
 
 ## ストーリーボードの消し方､設定
